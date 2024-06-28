@@ -8,6 +8,6 @@ package klj.connection;
  *
  * @author nicolasguerineau
  */
-public class member extends customer{
+public final class member extends customer{
     int reduction;
 }
