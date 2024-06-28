@@ -9,5 +9,6 @@ package klj.ride;
  * @author nicolasguerineau
  */
 public class amusement_ride {
+    // ticket adn ticket type
     
 }
