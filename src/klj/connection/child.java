@@ -12,5 +12,6 @@ public final class child extends member {
     int rc;// reduction regular dans la base de données
     public child(){
     reduction = rc;
+    accestype=0;
     }
 }

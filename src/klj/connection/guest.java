@@ -9,5 +9,8 @@ package klj.connection;
  * @author nicolasguerineau
  */
 public final class guest extends customer {
+    public guest(){
+    accestype=0;
     
+    }
 }
