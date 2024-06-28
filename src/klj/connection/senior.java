@@ -9,5 +9,8 @@ package klj.connection;
  * @author nicolasguerineau
  */
 public final class senior extends member{
-    
+    int rs;// reduction regular dans la base de données
+    public senior(){
+    reduction = rs;
+    }
 }

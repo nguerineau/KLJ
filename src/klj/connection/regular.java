@@ -9,5 +9,8 @@ package klj.connection;
  * @author nicolasguerineau
  */
 public final class regular extends member{
-    
+    int rr;// reduction regular dans la base de données
+    public regular(){
+    reduction = rr;
+    }
 }
