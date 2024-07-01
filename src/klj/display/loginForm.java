@@ -125,6 +125,7 @@ public class loginForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         //JOptionPane.showMessageDialog(null, "Sorry! "+"This service is not avalaible yet");
+        dispose();     
         secondWindow.main(new String[0]);
         
     }//GEN-LAST:event_button1ActionPerformed
