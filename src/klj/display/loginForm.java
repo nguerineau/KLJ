@@ -124,7 +124,7 @@ public class loginForm extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
         myUsername = String.valueOf(jTextPane1.getText());
-        myPassword=String.valueOf(jPasswordField1.getPassword());
+        myPassword = String.valueOf(jPasswordField1.getPassword());
         JOptionPane.showMessageDialog(null, "Your password is "+myPassword+"\n Your Username is "+myUsername);
         dispose();     
         secondWindow.main(new String[0]);
