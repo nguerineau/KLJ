@@ -71,7 +71,9 @@ public class secondWindow extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        loginForm.main(new String[0]);
+        dispose();
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
