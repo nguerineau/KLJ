@@ -52,9 +52,8 @@ public class loginForm extends javax.swing.JFrame {
 
         label1.setText("Password");
 
-        label3.setBackground(new java.awt.Color(0, 0, 0));
         label3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        label3.setForeground(new java.awt.Color(255, 255, 255));
+        label3.setForeground(new java.awt.Color(204, 51, 0));
         label3.setText("Welcome to our website");
 
         button1.setBackground(new java.awt.Color(0, 255, 0));
