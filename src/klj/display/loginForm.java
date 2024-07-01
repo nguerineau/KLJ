@@ -124,7 +124,8 @@ public class loginForm extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
         
-        //JOptionPane.showMessageDialog(null, "Sorry! "+"This service is not avalaible yet");
+        myPassword=String.valueOf(jPasswordField1.getPassword());
+        JOptionPane.showMessageDialog(null, "Your password is "+myPassword);
         dispose();     
         secondWindow.main(new String[0]);
         
@@ -166,7 +167,7 @@ public class loginForm extends javax.swing.JFrame {
         });
     }
     
-   
+   protected String myPassword;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button button1;
     private javax.swing.JPasswordField jPasswordField1;
