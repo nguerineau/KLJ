@@ -7,6 +7,9 @@ package klj;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.*;
+
 //Kid Land Java
 /**
  *
@@ -19,11 +22,13 @@ public class KLJ {
      */
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
-        String username="tux";
-        String password="kantor";
-        String url="jdbc:mysql://localhost:8889/KLJ";
+        String sql="select type from account were id=2";
+        String username="root";
+        String password="root";
+        String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         Connection con = DriverManager.getConnection(url,username,password);
-        
+        Statement st = con.createStatement();
+        st.executeQuery(url);
     }
     
 }
