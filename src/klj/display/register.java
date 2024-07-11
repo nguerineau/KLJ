@@ -367,8 +367,8 @@ public class register extends javax.swing.JFrame {
         stmt2.setString(1,username);
         stmt2.setInt(2, 1);
         stmt2.setString(3,password);
-        stmt2.setString(4,null);
-        stmt2.setString(6,null);
+        stmt2.setString(4,null);//mail
+        stmt2.setString(6,null);//counrty
         stmt2.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
