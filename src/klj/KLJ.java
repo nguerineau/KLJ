@@ -35,8 +35,15 @@ public class KLJ {
         System.out.println(test1);
         
         }
-        String rud="insert into account (username,type,password,email,date,country) \n" +"values \n" +"('test3',0,null,null,null,null);";
-        stmt.executeQuery(rud); 
+        
+        PreparedStatement stmt2 = con.prepareStatement("INSERT INTO account(username, type) VALUES (?, ?)");
+
+        stmt2.setString(1,"test5");
+        stmt2.setInt(2, 0);
+        stmt2.executeUpdate();
+        
+        //String rud="insert into account (username,type,password,email,date,country) \n" +"values \n" +"('test3',0,null,null,null,null);";
+        //stmt.executeQuery(rud); 
         
         
         
