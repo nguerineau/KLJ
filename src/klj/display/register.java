@@ -108,8 +108,8 @@ public class register extends javax.swing.JFrame {
         });
 
         countryName.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                countryNameFocusGained(evt);
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                countryNameFocusLost(evt);
             }
         });
 
@@ -464,11 +464,6 @@ public class register extends javax.swing.JFrame {
         lastName = LName.getText();
     }//GEN-LAST:event_LNameFocusLost
 
-    private void countryNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_countryNameFocusGained
-        // TODO add your handling code here:
-        country = countryName.getText();
-    }//GEN-LAST:event_countryNameFocusGained
-
     private void emailRegisterFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailRegisterFocusLost
         // TODO add your handling code here:
         myMail = emailRegister.getText();
@@ -478,6 +473,11 @@ public class register extends javax.swing.JFrame {
         // TODO add your handling code here:
         emailRegister.setText("");
     }//GEN-LAST:event_emailRegisterMouseClicked
+
+    private void countryNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_countryNameFocusLost
+        // TODO add your handling code here:
+        country = countryName.getText();
+    }//GEN-LAST:event_countryNameFocusLost
 
     /**
      * @param args the command line arguments

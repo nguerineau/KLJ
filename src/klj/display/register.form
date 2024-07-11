@@ -186,7 +186,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="countryName">
       <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="countryNameFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="countryNameFocusLost"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
