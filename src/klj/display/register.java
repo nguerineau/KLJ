@@ -91,6 +91,16 @@ public class register extends javax.swing.JFrame {
         });
 
         LName.setText("Enter your last name here");
+        LName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                LNameFocusLost(evt);
+            }
+        });
+        LName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LNameMouseClicked(evt);
+            }
+        });
         LName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LNameActionPerformed(evt);
@@ -434,6 +444,16 @@ public class register extends javax.swing.JFrame {
         // TODO add your handling code here:
         firstName = fName.getText();
     }//GEN-LAST:event_fNameFocusLost
+
+    private void LNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LNameMouseClicked
+        // TODO add your handling code here:
+        LName.setText("");
+    }//GEN-LAST:event_LNameMouseClicked
+
+    private void LNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LNameFocusLost
+        // TODO add your handling code here:
+        lastName = LName.getText();
+    }//GEN-LAST:event_LNameFocusLost
 
     /**
      * @param args the command line arguments
