@@ -384,6 +384,7 @@ public class register extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
         }
+        dispose();
         
         
     }//GEN-LAST:event_registerButtonActionPerformed
