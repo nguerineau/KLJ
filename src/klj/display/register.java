@@ -4,6 +4,8 @@
  */
 package klj.display;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nicolasguerineau
@@ -40,7 +42,7 @@ public class register extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         yearbirth = new javax.swing.JTextField();
-        emailName = new javax.swing.JTextField();
+        emailRegister = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         passwordMemory = new javax.swing.JPasswordField();
@@ -55,7 +57,7 @@ public class register extends javax.swing.JFrame {
 
         jLabel2.setText("email");
 
-        fName.setText("enter your name here");
+        fName.setText("Enter your name here");
         fName.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 fNameMouseClicked(evt);
@@ -67,6 +69,7 @@ public class register extends javax.swing.JFrame {
             }
         });
 
+        LName.setText("Enter your last name here");
         LName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LNameActionPerformed(evt);
@@ -121,14 +124,44 @@ public class register extends javax.swing.JFrame {
             }
         });
 
+        emailRegister.setText("exemplemail@test.com");
+        emailRegister.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                emailRegisterKeyTyped(evt);
+            }
+        });
+
         jLabel9.setText("password");
 
         jLabel10.setText("comfirm password");
 
+        passwordMemory.setText("enterpassword");
         passwordMemory.setPreferredSize(new java.awt.Dimension(70, 25));
+        passwordMemory.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordMemoryFocusLost(evt);
+            }
+        });
+        passwordMemory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passwordMemoryMouseClicked(evt);
+            }
+        });
         passwordMemory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordMemoryActionPerformed(evt);
+            }
+        });
+
+        passwordConfirm.setText("enterpassword");
+        passwordConfirm.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordConfirmFocusLost(evt);
+            }
+        });
+        passwordConfirm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passwordConfirmMouseClicked(evt);
             }
         });
 
@@ -174,7 +207,7 @@ public class register extends javax.swing.JFrame {
                                 .addGap(28, 28, 28))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(emailName, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                                    .addComponent(emailRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
                                     .addComponent(countryName)
                                     .addComponent(LName)
                                     .addComponent(fName))
@@ -189,7 +222,7 @@ public class register extends javax.swing.JFrame {
                                 .addGap(52, 52, 52)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(passwordConfirm)
-                                    .addComponent(passwordMemory, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))))
+                                    .addComponent(passwordMemory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +237,7 @@ public class register extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
@@ -230,7 +263,7 @@ public class register extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(emailName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -243,7 +276,7 @@ public class register extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(registerButton)
                 .addGap(24, 24, 24))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(homePageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -279,6 +312,7 @@ public class register extends javax.swing.JFrame {
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,passwordCatch + passwordTest);
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void homePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homePageButtonActionPerformed
@@ -305,6 +339,39 @@ public class register extends javax.swing.JFrame {
         // TODO add your handling code here:
         yearbirth.setText("");
     }//GEN-LAST:event_yearbirthMouseClicked
+
+    private void emailRegisterKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailRegisterKeyTyped
+        // TODO add your handling code here:
+        emailRegister.setText("");
+    }//GEN-LAST:event_emailRegisterKeyTyped
+
+    private void passwordMemoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordMemoryMouseClicked
+        // TODO add your handling code here:
+         passwordMemory.setText("");
+    }//GEN-LAST:event_passwordMemoryMouseClicked
+
+    private void passwordMemoryFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordMemoryFocusLost
+        // TODO add your handling code here:
+        passwordCatch = passwordMemory.getText();
+        if (passwordCatch.equals(passwordTest)){
+            registerDoor = 1;
+        }
+        
+        
+    }//GEN-LAST:event_passwordMemoryFocusLost
+
+    private void passwordConfirmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordConfirmMouseClicked
+        // TODO add your handling code here:
+        passwordConfirm.setText("");
+    }//GEN-LAST:event_passwordConfirmMouseClicked
+
+    private void passwordConfirmFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFocusLost
+        // TODO add your handling code here:
+        passwordTest = passwordConfirm.getText();
+        if (passwordCatch.equals(passwordTest)){
+            registerDoor = 1;
+        }
+    }//GEN-LAST:event_passwordConfirmFocusLost
 
     /**
      * @param args the command line arguments
@@ -340,13 +407,16 @@ public class register extends javax.swing.JFrame {
             }
         });
     }
+    protected int registerDoor=0;
     protected String firstName;
     protected String lastName;
+    protected String passwordCatch;
+    protected String passwordTest;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField LName;
     private javax.swing.JTextField countryName;
     private javax.swing.JTextField dayBirth;
-    private javax.swing.JTextField emailName;
+    private javax.swing.JTextField emailRegister;
     private javax.swing.JTextField fName;
     private javax.swing.JButton homePageButton;
     private javax.swing.JLabel jLabel1;
