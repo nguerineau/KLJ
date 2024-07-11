@@ -33,7 +33,12 @@ public class KLJ {
         System.out.println(rs.getString(1)+"  "+rs.getInt(2)); 
         String test1 = rs.getString(1);
         System.out.println(test1);
+        
         }
+        String rud="insert into account (username,type,password,email,date,country) \n" +"values \n" +"('test3',0,null,null,null,null);";
+        stmt.executeQuery(rud); 
+        
+        
         
     }
     
