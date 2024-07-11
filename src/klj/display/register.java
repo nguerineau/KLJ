@@ -107,6 +107,12 @@ public class register extends javax.swing.JFrame {
             }
         });
 
+        countryName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                countryNameFocusGained(evt);
+            }
+        });
+
         jLabel3.setText("first name ");
 
         jLabel4.setText("last name");
@@ -156,6 +162,11 @@ public class register extends javax.swing.JFrame {
         });
 
         emailRegister.setText("exemplemail@test.com");
+        emailRegister.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailRegisterFocusLost(evt);
+            }
+        });
         emailRegister.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 emailRegisterKeyTyped(evt);
@@ -367,8 +378,8 @@ public class register extends javax.swing.JFrame {
         stmt2.setString(1,username);
         stmt2.setInt(2, 1);
         stmt2.setString(3,password);
-        stmt2.setString(4,null);//mail
-        stmt2.setString(6,null);//counrty
+        stmt2.setString(4,myMail);//mail
+        stmt2.setString(6,country);//counrty
         stmt2.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
@@ -458,6 +469,16 @@ public class register extends javax.swing.JFrame {
         lastName = LName.getText();
     }//GEN-LAST:event_LNameFocusLost
 
+    private void countryNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_countryNameFocusGained
+        // TODO add your handling code here:
+        country = countryName.getText();
+    }//GEN-LAST:event_countryNameFocusGained
+
+    private void emailRegisterFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailRegisterFocusLost
+        // TODO add your handling code here:
+        myMail = emailRegister.getText();
+    }//GEN-LAST:event_emailRegisterFocusLost
+
     /**
      * @param args the command line arguments
      */
@@ -493,7 +514,9 @@ public class register extends javax.swing.JFrame {
         });
     }
     protected String username;
-    protected int registerDoor=0;
+    protected int registerDoor=0; // like a real door to allow you to register. Also not very nice :(
+    protected String myMail;
+    protected String country; //Country Road take me Home!
     protected String firstName;
     protected String lastName;
     protected String passwordCatch;

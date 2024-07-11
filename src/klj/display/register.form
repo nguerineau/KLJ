@@ -185,6 +185,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="countryName">
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="countryNameFocusGained"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -248,6 +251,7 @@
         <Property name="text" type="java.lang.String" value="exemplemail@test.com"/>
       </Properties>
       <Events>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="emailRegisterFocusLost"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="emailRegisterKeyTyped"/>
       </Events>
     </Component>
