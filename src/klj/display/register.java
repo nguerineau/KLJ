@@ -4,6 +4,12 @@
  */
 package klj.display;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -326,7 +332,7 @@ public class register extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordMemoryActionPerformed
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
         if(registerDoor == 0){
             JOptionPane.showMessageDialog(null,"Several array must be fill");
         }
@@ -338,6 +344,21 @@ public class register extends javax.swing.JFrame {
             
             //username = "username";
             JOptionPane.showMessageDialog(null,"Your username is : "+username);
+        }
+        
+        String password =passwordCatch;
+        String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        
+        Connection con;
+        try {
+            con = DriverManager.getConnection(url,"root","root");
+            PreparedStatement stmt2 = con.prepareStatement("INSERT INTO account(username, type) VALUES (?, ?)");
+
+        stmt2.setString(1,username);
+        stmt2.setInt(2, 1);
+        stmt2.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
