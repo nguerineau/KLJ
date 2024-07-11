@@ -214,18 +214,19 @@ public class loginForm extends javax.swing.JFrame {
         Connection con;
         try {
             con = DriverManager.getConnection(url,"root","root");
-            String sql="SELECT * FROM account WHERE username="+username;
+            String sql="SELECT password FROM account WHERE username="+"'"+username+"'";
+            System.out.println(sql);
             Statement stmt=con.createStatement(); 
             ResultSet rs=stmt.executeQuery(sql); 
         
             //while(rs.next()){ 
                 dbUsernameAns = rs.getString(1);
-                dbPasswordAns = rs.getString(2); 
+                dbPasswordAns = rs.getString(3); 
                 if(username == dbUsernameAns){
                 //continue
                 
                     if(password == dbPasswordAns){
-                    // log in 
+                        System.out.println("that work");
                     }
                     else 
                     {
