@@ -12,9 +12,8 @@ import java.sql.*;
 
 //Kid Land Java
 /**
- *
  * @author nicolasguerineau
- */
+ **/
 public class KLJ {
     //test upload
     /**
@@ -22,13 +21,20 @@ public class KLJ {
      */
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
-        String sql="select type from account were id=2";
+        String sql="SELECT * FROM account WHERE type=2";
         String username="root";
         String password="root";
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         Connection con = DriverManager.getConnection(url,username,password);
-        Statement st = con.createStatement();
-        st.executeQuery(url);
+        Statement stmt=con.createStatement(); 
+        ResultSet rs=stmt.executeQuery(sql); 
+        
+        while(rs.next()){ 
+        System.out.println(rs.getString(1)+"  "+rs.getInt(2)); 
+        String test1 = rs.getString(1);
+        System.out.println(test1);
+        }
+        
     }
     
 }
