@@ -37,7 +37,6 @@ public class KLJ {
         }
         
         PreparedStatement stmt2 = con.prepareStatement("INSERT INTO account(username, type) VALUES (?, ?)");
-
         stmt2.setString(1,"test5");
         stmt2.setInt(2, 0);
         stmt2.executeUpdate();
