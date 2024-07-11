@@ -4,6 +4,14 @@
  */
 package klj.display;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -193,15 +201,49 @@ public class loginForm extends javax.swing.JFrame {
 
     private void passwordLookFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordLookFocusLost
         
-        String password = passwordLook.getText();
+        password = passwordLook.getText();
     }//GEN-LAST:event_passwordLookFocusLost
 
     private void userFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userFocusLost
-        String username = user.getText();
+        username = user.getText();
     }//GEN-LAST:event_userFocusLost
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         
+        Connection con;
+        try {
+            con = DriverManager.getConnection(url,"root","root");
+            String sql="SELECT * FROM account WHERE username="+username;
+            Statement stmt=con.createStatement(); 
+            ResultSet rs=stmt.executeQuery(sql); 
+        
+            //while(rs.next()){ 
+                dbUsernameAns = rs.getString(1);
+                dbPasswordAns = rs.getString(2); 
+                if(username == dbUsernameAns){
+                //continue
+                
+                    if(password == dbPasswordAns){
+                    // log in 
+                    }
+                    else 
+                    {
+                    // acces denied wrong password 
+                    }
+                
+                
+                }
+                else{
+                // username those not exist
+                }
+                
+                
+        //}
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
@@ -239,6 +281,10 @@ public class loginForm extends javax.swing.JFrame {
             }
         });
     }
+   String username;
+   String password;
+   String dbUsernameAns;
+   String dbPasswordAns;
    protected String myUsername;
    protected String myPassword;
     // Variables declaration - do not modify//GEN-BEGIN:variables
