@@ -167,9 +167,9 @@ public class register extends javax.swing.JFrame {
                 emailRegisterFocusLost(evt);
             }
         });
-        emailRegister.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                emailRegisterKeyTyped(evt);
+        emailRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                emailRegisterMouseClicked(evt);
             }
         });
 
@@ -413,11 +413,6 @@ public class register extends javax.swing.JFrame {
         yearbirth.setText("");
     }//GEN-LAST:event_yearbirthMouseClicked
 
-    private void emailRegisterKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailRegisterKeyTyped
-        // TODO add your handling code here:
-        emailRegister.setText("");
-    }//GEN-LAST:event_emailRegisterKeyTyped
-
     private void passwordMemoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordMemoryMouseClicked
         // TODO add your handling code here:
          passwordMemory.setText("");
@@ -478,6 +473,11 @@ public class register extends javax.swing.JFrame {
         // TODO add your handling code here:
         myMail = emailRegister.getText();
     }//GEN-LAST:event_emailRegisterFocusLost
+
+    private void emailRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailRegisterMouseClicked
+        // TODO add your handling code here:
+        emailRegister.setText("");
+    }//GEN-LAST:event_emailRegisterMouseClicked
 
     /**
      * @param args the command line arguments
