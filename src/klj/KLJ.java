@@ -22,8 +22,8 @@ public class KLJ {
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
         String sql="SELECT * FROM account WHERE type=2";
-        String username="root";
-        String password="root";
+        String username ="root";
+        String password ="root";
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         Connection con = DriverManager.getConnection(url,username,password);
         Statement stmt=con.createStatement(); 
