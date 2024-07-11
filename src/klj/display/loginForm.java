@@ -31,7 +31,7 @@ public class loginForm extends javax.swing.JFrame {
 
         passwordLook = new javax.swing.JPasswordField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        LogIn = new javax.swing.JTextPane();
+        user = new javax.swing.JTextPane();
         label2 = new java.awt.Label();
         label1 = new java.awt.Label();
         button1 = new java.awt.Button();
@@ -45,19 +45,29 @@ public class loginForm extends javax.swing.JFrame {
         setBackground(new java.awt.Color(206, 206, 206));
 
         passwordLook.setText("jPasswordField1");
+        passwordLook.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordLookFocusLost(evt);
+            }
+        });
         passwordLook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 passwordLookMouseClicked(evt);
             }
         });
 
-        LogIn.setText("Enter your username");
-        LogIn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LogInMouseClicked(evt);
+        user.setText("Enter your username");
+        user.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                userFocusLost(evt);
             }
         });
-        jScrollPane1.setViewportView(LogIn);
+        user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(user);
 
         label2.setText("Login");
 
@@ -87,6 +97,11 @@ public class loginForm extends javax.swing.JFrame {
 
         jButton1.setText("log in");
         jButton1.setToolTipText("");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,7 +168,7 @@ public class loginForm extends javax.swing.JFrame {
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-        myUsername = String.valueOf(LogIn.getText());
+        myUsername = String.valueOf(user.getText());
         myPassword = String.valueOf(passwordLook.getPassword());
         JOptionPane.showMessageDialog(null, "Your password is "+myPassword+"\n Your Username is "+myUsername);
         
@@ -166,15 +181,28 @@ public class loginForm extends javax.swing.JFrame {
         register.main(new String[0]);
     }//GEN-LAST:event_createAccountActionPerformed
 
-    private void LogInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInMouseClicked
+    private void userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userMouseClicked
         // TODO add your handling code here:
-        LogIn.setText("");
-    }//GEN-LAST:event_LogInMouseClicked
+        user.setText("");
+    }//GEN-LAST:event_userMouseClicked
 
     private void passwordLookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordLookMouseClicked
         // TODO add your handling code here:
         passwordLook.setText("");
     }//GEN-LAST:event_passwordLookMouseClicked
+
+    private void passwordLookFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordLookFocusLost
+        
+        String password = passwordLook.getText();
+    }//GEN-LAST:event_passwordLookFocusLost
+
+    private void userFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userFocusLost
+        String username = user.getText();
+    }//GEN-LAST:event_userFocusLost
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -214,7 +242,6 @@ public class loginForm extends javax.swing.JFrame {
    protected String myUsername;
    protected String myPassword;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextPane LogIn;
     private java.awt.Button button1;
     private javax.swing.JButton createAccount;
     private javax.swing.JButton jButton1;
@@ -223,5 +250,6 @@ public class loginForm extends javax.swing.JFrame {
     private java.awt.Label label1;
     private java.awt.Label label2;
     private javax.swing.JPasswordField passwordLook;
+    private javax.swing.JTextPane user;
     // End of variables declaration//GEN-END:variables
 }
