@@ -9,5 +9,5 @@ package klj.connection;
  * @author nicolasguerineau
  */
 public class customer extends connection {
-    
+    // image de profil
 }

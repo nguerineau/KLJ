@@ -11,8 +11,8 @@ package klj.connection;
  */
 public class connection {
     String username;
-    // password
+    String password;
     int accestype; // admin(1) or customer(0)
-    // image de profil
+    
     
 }

@@ -11,6 +11,7 @@ package klj.connection;
 public final class employee extends connection {
     public employee(){
     accestype=1;
+    // image de profil
     
     }
 }
