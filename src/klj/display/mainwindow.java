@@ -4,6 +4,9 @@
  */
 package klj.display;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author nicolasguerineau
@@ -30,7 +33,7 @@ public class mainwindow extends javax.swing.JFrame {
         registerButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
+        imageShow = new javax.swing.JEditorPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,7 +57,13 @@ public class mainwindow extends javax.swing.JFrame {
         jLabel1.setText("KID'S LAND PARK");
         jLabel1.setFocusable(false);
 
-        jScrollPane1.setViewportView(jEditorPane1);
+        imageShow.setEditable(false);
+        imageShow.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                imageShowFocusGained(evt);
+            }
+        });
+        jScrollPane1.setViewportView(imageShow);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,6 +113,11 @@ public class mainwindow extends javax.swing.JFrame {
         
     }//GEN-LAST:event_logInButtonActionPerformed
 
+    private void imageShowFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_imageShowFocusGained
+        // TODO add your handling code here:
+      // frame.add(new JLabel(new ImageIcon( "C:\Users\meuni\Documents\NetBeansProjects\KLJ\src\klj\display\ThemePark.jpg")));
+    }//GEN-LAST:event_imageShowFocusGained
+
     /**
      * @param args the command line arguments
      */
@@ -140,7 +154,7 @@ public class mainwindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JEditorPane imageShow;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logInButton;
