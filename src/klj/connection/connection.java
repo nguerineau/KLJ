@@ -10,7 +10,7 @@ package klj.connection;
  * @author nicolasguerineau
  */
 public class connection {
-    String username;
+    String usr;
     String password;
     int accestype; // admin(1) or customer(0)
     

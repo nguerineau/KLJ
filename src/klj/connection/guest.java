@@ -11,6 +11,7 @@ package klj.connection;
 public final class guest extends customer {
     public guest(){
     accestype=0;
-    
+    String username = "guest";
+    String password = "guest";
     }
 }
