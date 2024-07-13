@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.*;
+import klj.display.mainwindow;
 
 //Kid Land Java
 /**
@@ -21,7 +22,7 @@ public class KLJ {
      */
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
-        
+        mainwindow.main(new String[0]);
         
         
         
