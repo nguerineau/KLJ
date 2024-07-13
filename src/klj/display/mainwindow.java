@@ -32,8 +32,7 @@ public class mainwindow extends javax.swing.JFrame {
         logInButton = new javax.swing.JButton();
         registerButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        imageShow = new javax.swing.JEditorPane();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,20 +56,15 @@ public class mainwindow extends javax.swing.JFrame {
         jLabel1.setText("KID'S LAND PARK");
         jLabel1.setFocusable(false);
 
-        imageShow.setEditable(false);
-        imageShow.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                imageShowFocusGained(evt);
-            }
-        });
-        jScrollPane1.setViewportView(imageShow);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ThemePark.jpg"))); // NOI18N
+        jLabel2.setText("imageShow");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 203, Short.MAX_VALUE)
+                .addGap(0, 134, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -81,17 +75,17 @@ public class mainwindow extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(170, 170, 170))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(235, 235, 235))))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(93, 93, 93))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(39, 39, 39)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                .addGap(51, 51, 51)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(registerButton)
                     .addComponent(logInButton))
@@ -112,11 +106,6 @@ public class mainwindow extends javax.swing.JFrame {
         loginForm.main(new String[0]);
         
     }//GEN-LAST:event_logInButtonActionPerformed
-
-    private void imageShowFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_imageShowFocusGained
-        // TODO add your handling code here:
-      // frame.add(new JLabel(new ImageIcon( "C:\Users\meuni\Documents\NetBeansProjects\KLJ\src\klj\display\ThemePark.jpg")));
-    }//GEN-LAST:event_imageShowFocusGained
 
     /**
      * @param args the command line arguments
@@ -149,14 +138,14 @@ public class mainwindow extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new mainwindow().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JEditorPane imageShow;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton logInButton;
     private javax.swing.JButton registerButton;
     // End of variables declaration//GEN-END:variables
