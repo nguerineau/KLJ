@@ -4,6 +4,14 @@
  */
 package klj.ride;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import klj.display.register;
+
 /**
  *
  * @author meuni
@@ -38,12 +46,22 @@ public class parkATRisk extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        regularTicketsNumber.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                regularTicketsNumberFocusLost(evt);
+            }
+        });
         regularTicketsNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regularTicketsNumberActionPerformed(evt);
             }
         });
 
+        childTicketsNumber.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                childTicketsNumberFocusLost(evt);
+            }
+        });
         childTicketsNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 childTicketsNumberActionPerformed(evt);
@@ -164,13 +182,40 @@ public class parkATRisk extends javax.swing.JFrame {
     }//GEN-LAST:event_seniorTicketsNumberActionPerformed
 
     private void seniorTicketsNumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_seniorTicketsNumberFocusLost
-        // TODO add your handling code here
+        seniorticketString = seniorTicketsNumber.getText();
+        seniorticket = Integer.parseInt(seniorticketString);
         
     }//GEN-LAST:event_seniorTicketsNumberFocusLost
 
     private void ticketsBookATeamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ticketsBookATeamActionPerformed
-        // TODO add your handling code here:
+        String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        
+        Connection con;
+        try {
+            con = DriverManager.getConnection(url,"root","root");
+            PreparedStatement stmt2 = con.prepareStatement("INSERT INTO klj.ticket (ticket_regular, tiket_child, ticket_senior, ride)  VALUES (?, ?, ?, ?)");
+
+        stmt2.setInt(1,regularticket);
+        stmt2.setInt(2,childticket);
+        stmt2.setInt(3,seniorticket);
+        stmt2.setInt(4,ride);
+        
+        stmt2.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        dispose();
     }//GEN-LAST:event_ticketsBookATeamActionPerformed
+
+    private void childTicketsNumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_childTicketsNumberFocusLost
+        childticketString = childTicketsNumber.getText();
+        childticket = Integer.parseInt(childticketString);
+    }//GEN-LAST:event_childTicketsNumberFocusLost
+
+    private void regularTicketsNumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regularTicketsNumberFocusLost
+        regularticketString = regularTicketsNumber.getText();
+        regularticket = Integer.parseInt(regularticketString);
+    }//GEN-LAST:event_regularTicketsNumberFocusLost
 
     /**
      * @param args the command line arguments
@@ -206,7 +251,13 @@ public class parkATRisk extends javax.swing.JFrame {
             }
         });
     }
-
+    int ride = 2;
+    String regularticketString ;
+    int regularticket;
+    String seniorticketString ;
+    int seniorticket;
+    String childticketString ;
+    int childticket;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label child;
     private javax.swing.JTextField childTicketsNumber;
