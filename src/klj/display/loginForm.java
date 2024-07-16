@@ -217,14 +217,15 @@ public class loginForm extends javax.swing.JFrame {
         try {
             con = DriverManager.getConnection(url,"root","root");
             PreparedStatement stmt2 = con.prepareStatement("SELECT password FROM account WHERE username = 'tux'");
+            stmt2.setString(1,username);
 
-        stmt2.setString(1,username);
-        stmt2.setInt(2, 1);
-        stmt2.setString(3,password);
         
         stmt2.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+            if(){
+                
+            }
         }
         dispose();
         
