@@ -209,7 +209,7 @@ public class loginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_userFocusLost
 
     private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
-        /*
+        
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         
         Connection con;
@@ -243,11 +243,11 @@ public class loginForm extends javax.swing.JFrame {
                 
                 
                 
-        //}
+        
         }
         catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
         
         
     }//GEN-LAST:event_logInButtonMouseClicked
