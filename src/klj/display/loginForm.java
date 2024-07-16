@@ -284,7 +284,7 @@ public class loginForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private java.awt.Label label1;
     private java.awt.Label label2;
-    private javax.swing.JButton logInButton;
+    public javax.swing.JButton logInButton;
     private javax.swing.JPasswordField passwordLook;
     private javax.swing.JTextPane user;
     // End of variables declaration//GEN-END:variables
