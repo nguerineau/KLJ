@@ -4,6 +4,9 @@
  */
 package klj.display;
 
+import klj.ride.parkATRisk;
+import klj.ride.tLaTPula;
+
 /**
  *
  * @author meuni
@@ -31,10 +34,22 @@ public class accessRide extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ride1.setText("Ride 1");
+        ride1.setText("T la T pu LA");
+        ride1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ride1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ride1MouseClicked(evt);
+            }
+        });
 
-        ride2.setText("Ride 2");
+        ride2.setText("Park A T Risk");
         ride2.setToolTipText("");
+        ride2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ride2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ride2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -42,10 +57,10 @@ public class accessRide extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ride2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ride1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ride2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ride1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -54,11 +69,21 @@ public class accessRide extends javax.swing.JFrame {
                 .addComponent(ride1)
                 .addGap(70, 70, 70)
                 .addComponent(ride2)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ride1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ride1MouseClicked
+        // TODO add your handling code here:
+        tLaTPula.main(new String[0]);
+    }//GEN-LAST:event_ride1MouseClicked
+
+    private void ride2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ride2MouseClicked
+        // TODO add your handling code here:
+        parkATRisk.main(new String[0]);
+    }//GEN-LAST:event_ride2MouseClicked
 
     /**
      * @param args the command line arguments

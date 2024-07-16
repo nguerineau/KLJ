@@ -25,11 +25,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ride2" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="ride1" min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="ride2" max="32767" attributes="0"/>
+                  <Component id="ride1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="312" max="32767" attributes="0"/>
+              <EmptySpace pref="276" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -40,7 +40,7 @@
               <Component id="ride1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               <Component id="ride2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="158" max="32767" attributes="0"/>
+              <EmptySpace pref="146" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -48,14 +48,30 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="ride1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ride 1"/>
+        <Property name="text" type="java.lang.String" value="T la T pu LA"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ride1MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="ride2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ride 2"/>
+        <Property name="text" type="java.lang.String" value="Park A T Risk"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ride2MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
