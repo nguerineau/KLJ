@@ -32,17 +32,17 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="titleTLA4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="titleTLA5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="titleTLA3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="regularTicketsTLA" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="seniorTicketsTLA" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="childTicketsTLA" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="290" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="titlePARK1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="titlePARK3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="titlePARK2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="childTicketsAT" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="regularTicketsAT" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="seniorTicketsAT" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -56,7 +56,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="titleTLA2" min="-2" max="-2" attributes="0"/>
+                      <Component id="textTLA" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -84,21 +84,21 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="refreshButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="titleTLA2" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="textTLA" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="titleTLA3" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="childTicketsTLA" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="titleTLA4" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="regularTicketsTLA" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="titleTLA5" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="seniorTicketsTLA" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="titlePARK" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="titlePARK1" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="childTicketsAT" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="titlePARK3" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="regularTicketsAT" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="titlePARK2" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="seniorTicketsAT" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -128,7 +128,7 @@
         <Property name="text" type="java.lang.String" value="Your Tickets for the Park A T Risk Ride"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="titleTLA2">
+    <Component class="java.awt.Label" name="textTLA">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="33" type="rgb"/>
@@ -139,7 +139,7 @@
         <Property name="text" type="java.lang.String" value="Your Tickets for the T La T Pu  LA ride"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="titleTLA3">
+    <Component class="java.awt.Label" name="childTicketsTLA">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="33" type="rgb"/>
@@ -150,7 +150,7 @@
         <Property name="text" type="java.lang.String" value="0 Child Tickets"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="titleTLA4">
+    <Component class="java.awt.Label" name="regularTicketsTLA">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="33" type="rgb"/>
@@ -159,6 +159,17 @@
           <Font name="Dialog" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="0 Regular Tickets"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="seniorTicketsTLA">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="0 Senior Tickets"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="refreshButton">
@@ -166,7 +177,7 @@
         <Property name="text" type="java.lang.String" value="Refresh"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="titlePARK1">
+    <Component class="java.awt.Label" name="childTicketsAT">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -177,7 +188,7 @@
         <Property name="text" type="java.lang.String" value="0 Child Tickets"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="titlePARK2">
+    <Component class="java.awt.Label" name="seniorTicketsAT">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -188,7 +199,7 @@
         <Property name="text" type="java.lang.String" value="0 Senior Tickets"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="titlePARK3">
+    <Component class="java.awt.Label" name="regularTicketsAT">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -197,17 +208,6 @@
           <Font name="Dialog" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="0 Regular Tickets"/>
-      </Properties>
-    </Component>
-    <Component class="java.awt.Label" name="titleTLA5">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="33" type="rgb"/>
-        </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="12" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="0 Senior Tickets"/>
       </Properties>
     </Component>
   </SubComponents>

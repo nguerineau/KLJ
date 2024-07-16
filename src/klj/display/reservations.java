@@ -28,14 +28,14 @@ public class reservations extends javax.swing.JFrame {
 
         textReservationsTitle = new java.awt.Label();
         titlePARK = new java.awt.Label();
-        titleTLA2 = new java.awt.Label();
-        titleTLA3 = new java.awt.Label();
-        titleTLA4 = new java.awt.Label();
+        textTLA = new java.awt.Label();
+        childTicketsTLA = new java.awt.Label();
+        regularTicketsTLA = new java.awt.Label();
+        seniorTicketsTLA = new java.awt.Label();
         refreshButton = new javax.swing.JButton();
-        titlePARK1 = new java.awt.Label();
-        titlePARK2 = new java.awt.Label();
-        titlePARK3 = new java.awt.Label();
-        titleTLA5 = new java.awt.Label();
+        childTicketsAT = new java.awt.Label();
+        seniorTicketsAT = new java.awt.Label();
+        regularTicketsAT = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -48,35 +48,35 @@ public class reservations extends javax.swing.JFrame {
         titlePARK.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         titlePARK.setText("Your Tickets for the Park A T Risk Ride");
 
-        titleTLA2.setBackground(new java.awt.Color(51, 255, 255));
-        titleTLA2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA2.setText("Your Tickets for the T La T Pu  LA ride");
+        textTLA.setBackground(new java.awt.Color(51, 255, 255));
+        textTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        textTLA.setText("Your Tickets for the T La T Pu  LA ride");
 
-        titleTLA3.setBackground(new java.awt.Color(51, 255, 255));
-        titleTLA3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA3.setText("0 Child Tickets");
+        childTicketsTLA.setBackground(new java.awt.Color(51, 255, 255));
+        childTicketsTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        childTicketsTLA.setText("0 Child Tickets");
 
-        titleTLA4.setBackground(new java.awt.Color(51, 255, 255));
-        titleTLA4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA4.setText("0 Regular Tickets");
+        regularTicketsTLA.setBackground(new java.awt.Color(51, 255, 255));
+        regularTicketsTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        regularTicketsTLA.setText("0 Regular Tickets");
+
+        seniorTicketsTLA.setBackground(new java.awt.Color(51, 255, 255));
+        seniorTicketsTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        seniorTicketsTLA.setText("0 Senior Tickets");
 
         refreshButton.setText("Refresh");
 
-        titlePARK1.setBackground(new java.awt.Color(255, 153, 51));
-        titlePARK1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titlePARK1.setText("0 Child Tickets");
+        childTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
+        childTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        childTicketsAT.setText("0 Child Tickets");
 
-        titlePARK2.setBackground(new java.awt.Color(255, 153, 51));
-        titlePARK2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titlePARK2.setText("0 Senior Tickets");
+        seniorTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
+        seniorTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        seniorTicketsAT.setText("0 Senior Tickets");
 
-        titlePARK3.setBackground(new java.awt.Color(255, 153, 51));
-        titlePARK3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titlePARK3.setText("0 Regular Tickets");
-
-        titleTLA5.setBackground(new java.awt.Color(51, 255, 255));
-        titleTLA5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA5.setText("0 Senior Tickets");
+        regularTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
+        regularTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        regularTicketsAT.setText("0 Regular Tickets");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,15 +87,15 @@ public class reservations extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titleTLA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleTLA5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleTLA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(regularTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seniorTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(childTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(290, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(titlePARK1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titlePARK3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titlePARK2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(childTicketsAT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(regularTicketsAT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seniorTicketsAT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +104,7 @@ public class reservations extends javax.swing.JFrame {
                         .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(titleTLA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -124,21 +124,21 @@ public class reservations extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(refreshButton)
                 .addGap(22, 22, 22)
-                .addComponent(titleTLA2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textTLA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleTLA3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(childTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleTLA4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(regularTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleTLA5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(seniorTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(titlePARK1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(childTicketsAT, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titlePARK3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(regularTicketsAT, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titlePARK2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(seniorTicketsAT, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41))
         );
 
@@ -182,15 +182,15 @@ public class reservations extends javax.swing.JFrame {
     public String ticketsForTLAChild;
     public String ticketsForATEAM;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label childTicketsAT;
+    private java.awt.Label childTicketsTLA;
     private javax.swing.JButton refreshButton;
+    private java.awt.Label regularTicketsAT;
+    private java.awt.Label regularTicketsTLA;
+    private java.awt.Label seniorTicketsAT;
+    private java.awt.Label seniorTicketsTLA;
     private java.awt.Label textReservationsTitle;
+    private java.awt.Label textTLA;
     private java.awt.Label titlePARK;
-    private java.awt.Label titlePARK1;
-    private java.awt.Label titlePARK2;
-    private java.awt.Label titlePARK3;
-    private java.awt.Label titleTLA2;
-    private java.awt.Label titleTLA3;
-    private java.awt.Label titleTLA4;
-    private java.awt.Label titleTLA5;
     // End of variables declaration//GEN-END:variables
 }
