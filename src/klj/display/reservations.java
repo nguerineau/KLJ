@@ -169,25 +169,53 @@ public class reservations extends javax.swing.JFrame {
             connection = DriverManager.getConnection(url, "root", "root");
 
             // SQL query with placeholders
-            String sql = "SELECT id, name, age FROM Users WHERE age > ? AND name LIKE ?";
+            String sql = "SELECT ticket_regular, tiket_child, ticket_senior FROM ticket WHERE ride=1";
             
             // Create a PreparedStatement
             preparedStatement = connection.prepareStatement(sql);
             
-            // Set parameters dynamically
-            preparedStatement.setInt(1, 25); // Set age > 25
-            preparedStatement.setString(2, "J%"); // Set name to start with 'J'
-
             // Execute the query
             resultSet = preparedStatement.executeQuery();
 
             // Process the result set
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                String name = resultSet.getString("name");
-                int age = resultSet.getInt("age");
+                
+                //getting value
+                childticketTLATPU = resultSet.getInt("tiket_child");
+                regularticketTLATPU = resultSet.getInt("tiket_regular");
+                seniorticketTLATPU = resultSet.getInt("tiket_senior");
+                
+                // update value
+                childTicketsTLA.setText(childticketTLATPU+" Child Tickets");
+                regularTicketsTLA.setText(regularticketTLATPU+" Regular Tickets");
+                seniorTicketsTLA.setText(seniorticketTLATPU+" Senior Tickets");
+                
 
-                System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age);
+            }
+            
+        // SQL query with placeholders
+            String sql = "SELECT ticket_regular, tiket_child, ticket_senior FROM ticket WHERE ride=2";
+            
+            // Create a PreparedStatement
+            preparedStatement = connection.prepareStatement(sql);
+            
+            // Execute the query
+            resultSet = preparedStatement.executeQuery();
+
+            // Process the result set
+            while (resultSet.next()) {
+                
+                //getting value
+                childticketAteam = resultSet.getInt("tiket_child");
+                regularticketAteam = resultSet.getInt("tiket_regular");
+                seniorticketAteam = resultSet.getInt("tiket_senior");
+                
+                // update value
+                childTicketsAT.setText(childticketAteam+" Child Tickets");
+                regularTicketsAT.setText(regularticketAteam+" Regular Tickets");
+                seniorTicketsAT.setText(seniorticketAteam+" Senior Tickets");
+                
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -203,10 +231,6 @@ public class reservations extends javax.swing.JFrame {
         }
         
         
-        
-        childTicketsTLA.setText(childticketTLATPU+" Child Tickets");
-        regularTicketsTLA.setText(regularticketTLATPU+" Regular Tickets");
-        seniorTicketsTLA.setText(seniorticketTLATPU+" Senior Tickets");
         
         
         childTicketsAT.setText(childticketAteam +" Child Tickets");
