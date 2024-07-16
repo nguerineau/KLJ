@@ -376,7 +376,8 @@ public class register extends javax.swing.JFrame {
         try {
             con = DriverManager.getConnection(url,"root","root");
             PreparedStatement stmt2 = con.prepareStatement("INSERT INTO account(username, type,password,mail,country) VALUES (?, ?, ?, ?, ?)");
-
+            
+            //input value
         stmt2.setString(1,username);
         stmt2.setInt(2, 1);
         stmt2.setString(3,password);
@@ -393,37 +394,37 @@ public class register extends javax.swing.JFrame {
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void homePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homePageButtonActionPerformed
-        // TODO add your handling code here:
+        
         dispose();
     }//GEN-LAST:event_homePageButtonActionPerformed
 
     private void fNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fNameMouseClicked
-        // TODO add your handling code here:
+        
         fName.setText("");
     }//GEN-LAST:event_fNameMouseClicked
 
     private void dayBirthMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dayBirthMouseClicked
-        // TODO add your handling code here:
+        
         dayBirth.setText("");
     }//GEN-LAST:event_dayBirthMouseClicked
 
     private void monthBirthMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_monthBirthMouseClicked
-        // TODO add your handling code here:
+        
         monthBirth.setText("");
     }//GEN-LAST:event_monthBirthMouseClicked
 
     private void yearbirthMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yearbirthMouseClicked
-        // TODO add your handling code here:
+        
         yearbirth.setText("");
     }//GEN-LAST:event_yearbirthMouseClicked
 
     private void passwordMemoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordMemoryMouseClicked
-        // TODO add your handling code here:
+        
          passwordMemory.setText("");
     }//GEN-LAST:event_passwordMemoryMouseClicked
 
     private void passwordMemoryFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordMemoryFocusLost
-        // TODO add your handling code here:
+        //password verification
         passwordCatch = passwordMemory.getText();
         if (passwordCatch.equals(passwordTest)){
             registerDoor = 10;
@@ -436,12 +437,12 @@ public class register extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordMemoryFocusLost
 
     private void passwordConfirmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordConfirmMouseClicked
-        // TODO add your handling code here:
+        
         passwordConfirm.setText("");
     }//GEN-LAST:event_passwordConfirmMouseClicked
 
     private void passwordConfirmFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmFocusLost
-        // TODO add your handling code here:
+        // second password verification
         passwordTest = passwordConfirm.getText();
         if (passwordCatch.equals(passwordTest)){
             registerDoor = 10;
@@ -454,32 +455,32 @@ public class register extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordConfirmFocusLost
 
     private void fNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fNameFocusLost
-        // TODO add your handling code here:
+        
         firstName = fName.getText();
     }//GEN-LAST:event_fNameFocusLost
 
     private void LNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LNameMouseClicked
-        // TODO add your handling code here:
+       
         LName.setText("");
     }//GEN-LAST:event_LNameMouseClicked
 
     private void LNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LNameFocusLost
-        // TODO add your handling code here:
+        
         lastName = LName.getText();
     }//GEN-LAST:event_LNameFocusLost
 
     private void emailRegisterFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailRegisterFocusLost
-        // TODO add your handling code here:
+       
         myMail = emailRegister.getText();
     }//GEN-LAST:event_emailRegisterFocusLost
 
     private void emailRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailRegisterMouseClicked
-        // TODO add your handling code here:
+        
         emailRegister.setText("");
     }//GEN-LAST:event_emailRegisterMouseClicked
 
     private void countryNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_countryNameFocusLost
-        // TODO add your handling code here:
+        
         country = countryName.getText();
     }//GEN-LAST:event_countryNameFocusLost
 
