@@ -194,8 +194,11 @@ public class parkATRisk extends javax.swing.JFrame {
         Connection con;
         try {
             con = DriverManager.getConnection(url,"root","root");
+            
+            // declaring statement 
             PreparedStatement stmt2 = con.prepareStatement("INSERT INTO klj.ticket (ticket_regular, tiket_child, ticket_senior, ride)  VALUES (?, ?, ?, ?)");
-
+            
+        // input value
         stmt2.setInt(1,regularticket);
         stmt2.setInt(2,childticket);
         stmt2.setInt(3,seniorticket);
