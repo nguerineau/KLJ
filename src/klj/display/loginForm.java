@@ -42,10 +42,10 @@ public class loginForm extends javax.swing.JFrame {
         user = new javax.swing.JTextPane();
         label2 = new java.awt.Label();
         label1 = new java.awt.Label();
-        button1 = new java.awt.Button();
+        Help = new java.awt.Button();
         createAccount = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        logInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Kids Land");
@@ -81,11 +81,11 @@ public class loginForm extends javax.swing.JFrame {
 
         label1.setText("Password");
 
-        button1.setBackground(new java.awt.Color(0, 255, 0));
-        button1.setLabel("Help");
-        button1.addActionListener(new java.awt.event.ActionListener() {
+        Help.setBackground(new java.awt.Color(0, 255, 0));
+        Help.setLabel("Help");
+        Help.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+                HelpActionPerformed(evt);
             }
         });
 
@@ -103,11 +103,11 @@ public class loginForm extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("KID'S LAND");
 
-        jButton1.setText("log in");
-        jButton1.setToolTipText("");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        logInButton.setText("log in");
+        logInButton.setToolTipText("");
+        logInButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                logInButtonMouseClicked(evt);
             }
         });
 
@@ -134,12 +134,12 @@ public class loginForm extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(logInButton)
                                 .addGap(126, 126, 126))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(createAccount)
                                 .addGap(111, 111, 111)))
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -160,10 +160,10 @@ public class loginForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
+                        .addComponent(logInButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(createAccount)))
                 .addGap(12, 12, 12))
@@ -174,14 +174,14 @@ public class loginForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+    private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
         // TODO add your handling code here:
         myUsername = String.valueOf(user.getText());
         myPassword = String.valueOf(passwordLook.getPassword());
         JOptionPane.showMessageDialog(null, "Your password is "+myPassword+"\n Your Username is "+myUsername);
         
         
-    }//GEN-LAST:event_button1ActionPerformed
+    }//GEN-LAST:event_HelpActionPerformed
 
     private void createAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountActionPerformed
         // TODO add your handling code here:
@@ -208,7 +208,8 @@ public class loginForm extends javax.swing.JFrame {
         username = user.getText();
     }//GEN-LAST:event_userFocusLost
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
+        /*
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         
         Connection con;
@@ -238,14 +239,18 @@ public class loginForm extends javax.swing.JFrame {
                 else{
                 // username those not exist
                 }
+
+                
                 
                 
         //}
         }
         catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton1MouseClicked
+        }*/
+        
+        
+    }//GEN-LAST:event_logInButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -281,6 +286,7 @@ public class loginForm extends javax.swing.JFrame {
                 new loginForm().setVisible(true);
             }
         });
+        
     }
    String username;
    String password;
@@ -289,13 +295,13 @@ public class loginForm extends javax.swing.JFrame {
    protected String myUsername;
    protected String myPassword;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button button1;
+    private java.awt.Button Help;
     private javax.swing.JButton createAccount;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private java.awt.Label label1;
     private java.awt.Label label2;
+    private javax.swing.JButton logInButton;
     private javax.swing.JPasswordField passwordLook;
     private javax.swing.JTextPane user;
     // End of variables declaration//GEN-END:variables
