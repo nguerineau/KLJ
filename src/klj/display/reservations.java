@@ -230,13 +230,7 @@ public class reservations extends javax.swing.JFrame {
             }
         }
         
-        
-        
-        
-        childTicketsAT.setText(childticketAteam +" Child Tickets");
-        regularTicketsAT.setText(regularticketAteam +" Regular Tickets");
-        seniorTicketsAT.setText(seniorticketAteam +" Senior Tickets");
-        
+       
         
     }//GEN-LAST:event_refreshButtonActionPerformed
 
@@ -275,6 +269,8 @@ public class reservations extends javax.swing.JFrame {
         });
     }
     
+    
+    // variable
     int regularticketAteam ;
     int regularticketTLATPU;
     int seniorticketAteam ;
