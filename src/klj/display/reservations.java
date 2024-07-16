@@ -194,7 +194,7 @@ public class reservations extends javax.swing.JFrame {
             }
             
         // SQL query with placeholders
-            String sql = "SELECT ticket_regular, tiket_child, ticket_senior FROM ticket WHERE ride=2";
+            sql = "SELECT ticket_regular, tiket_child, ticket_senior FROM ticket WHERE ride=2";
             
             // Create a PreparedStatement
             preparedStatement = connection.prepareStatement(sql);
