@@ -162,14 +162,14 @@ public class reservations extends javax.swing.JFrame {
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
+        ResultSet resultSet = null; 
 
         try {
             // Establishing a connection
             connection = DriverManager.getConnection(url, "root", "root");
 
             // SQL query with placeholders
-            String sql = "SELECT id, name, age FROM Users WHERE age > ? AND name LIKE ?";
+            String sql = "SELECT ticket_regular, tiket_child, ticket_senior FROM ticket WHERE age > ? AND name LIKE ?";
             
             // Create a PreparedStatement
             preparedStatement = connection.prepareStatement(sql);
