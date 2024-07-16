@@ -30,15 +30,15 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label1" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="label2" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="label3" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="child" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="senior" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="regular" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTextField2" min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="jTextField3" min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="jTextField1" pref="0" max="32767" attributes="0"/>
+                          <Component id="regularTicketsNumber" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="childTicketsNumber" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="seniorTicketsNumber" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="191" max="32767" attributes="0"/>
                   </Group>
@@ -69,20 +69,20 @@
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jTextField3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="childTicketsNumber" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jTextField2" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="regularTicketsNumber" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="label1" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="child" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="label3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="regular" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="label2" max="32767" attributes="0"/>
-                          <Component id="jTextField1" pref="30" max="32767" attributes="0"/>
+                          <Component id="senior" max="32767" attributes="0"/>
+                          <Component id="seniorTicketsNumber" pref="30" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -103,14 +103,14 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="regularTicketsNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regularTicketsNumberActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="childTicketsNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="childTicketsNumberActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -121,7 +121,7 @@
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label2">
+    <Component class="java.awt.Label" name="senior">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="66" red="ff" type="rgb"/>
@@ -129,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Senior Tickets"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label3">
+    <Component class="java.awt.Label" name="regular">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="66" red="ff" type="rgb"/>
@@ -137,7 +137,7 @@
         <Property name="text" type="java.lang.String" value="Regular Tickets"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label1">
+    <Component class="java.awt.Label" name="child">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="66" red="ff" type="rgb"/>
@@ -153,9 +153,9 @@
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="seniorTicketsNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seniorTicketsNumberActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="ticketsBookATeam">
