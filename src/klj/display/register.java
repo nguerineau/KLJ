@@ -370,6 +370,7 @@ public class register extends javax.swing.JFrame {
         
         String password =passwordCatch;
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        // Database credentials
         
         Connection con;
         try {

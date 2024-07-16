@@ -159,6 +159,7 @@ public class tLaTPula extends javax.swing.JFrame {
 
     private void ticketsBookSpaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ticketsBookSpaceMouseClicked
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        // Database credentials
         
         Connection con;
         try {

@@ -217,6 +217,7 @@ public class loginForm extends javax.swing.JFrame {
     private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
         
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        // Database credentials
         
         Connection con;
         try {
