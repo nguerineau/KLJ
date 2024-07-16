@@ -30,7 +30,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+<<<<<<< HEAD
               <Group type="103" groupAlignment="0" attributes="0">
+=======
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="regularTicketsTLA" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="seniorTicketsTLA" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="childTicketsTLA" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+>>>>>>> f1a677c8e23378776661e03049782938c86deefa
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="childTicketsAT" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -44,6 +56,17 @@
                   </Group>
               </Group>
           </Group>
+<<<<<<< HEAD
+=======
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="titlePARK" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="textTLA" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="234" max="32767" attributes="0"/>
+          </Group>
+>>>>>>> f1a677c8e23378776661e03049782938c86deefa
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="refreshButton" min="-2" max="-2" attributes="0"/>
@@ -158,7 +181,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0 Child Tickets"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="childticketTLATPU + &quot; Child Tickets&quot;" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="regularTicketsTLA">
@@ -169,7 +194,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0 Regular Tickets"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="regularticketTLATPU+&quot; Regular Tickets&quot;" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="seniorTicketsTLA">
@@ -180,7 +207,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0 Senior Tickets"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="seniorticketTLATPU +&quot; Senior Tickets&quot;" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="refreshButton">
@@ -199,7 +228,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0 Child Tickets"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="childticketAteam+&quot; Child Tickets&quot;" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="seniorTicketsAT">
@@ -210,7 +241,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0 Senior Tickets"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="seniorticketAteam+&quot; Senior Tickets&quot;" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="regularTicketsAT">
@@ -221,7 +254,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0 Regular Tickets"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="regularticketAteam+&quot; Regular Tickets&quot;" type="code"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

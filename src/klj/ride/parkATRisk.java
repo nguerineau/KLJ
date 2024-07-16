@@ -189,6 +189,7 @@ public class parkATRisk extends javax.swing.JFrame {
 
     private void ticketsBookATeamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ticketsBookATeamActionPerformed
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        // Database credentials
         
         Connection con;
         try {
