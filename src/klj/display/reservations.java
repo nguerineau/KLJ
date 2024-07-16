@@ -28,10 +28,14 @@ public class reservations extends javax.swing.JFrame {
 
         textReservationsTitle = new java.awt.Label();
         titlePARK = new java.awt.Label();
-        titleTLA1 = new java.awt.Label();
         titleTLA2 = new java.awt.Label();
         titleTLA3 = new java.awt.Label();
         titleTLA4 = new java.awt.Label();
+        refreshButton = new javax.swing.JButton();
+        titlePARK1 = new java.awt.Label();
+        titlePARK2 = new java.awt.Label();
+        titlePARK3 = new java.awt.Label();
+        titleTLA5 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -44,62 +48,98 @@ public class reservations extends javax.swing.JFrame {
         titlePARK.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         titlePARK.setText("Your Tickets for the Park A T Risk Ride");
 
-        titleTLA1.setBackground(new java.awt.Color(51, 255, 255));
-        titleTLA1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA1.setText("Your Tickets for the T La T Pu  LA ride");
-
         titleTLA2.setBackground(new java.awt.Color(51, 255, 255));
         titleTLA2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         titleTLA2.setText("Your Tickets for the T La T Pu  LA ride");
 
         titleTLA3.setBackground(new java.awt.Color(51, 255, 255));
         titleTLA3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA3.setText("Your Tickets for the T La T Pu  LA ride");
+        titleTLA3.setText("0 Child Tickets");
 
         titleTLA4.setBackground(new java.awt.Color(51, 255, 255));
         titleTLA4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        titleTLA4.setText("Your Tickets for the T La T Pu  LA ride");
+        titleTLA4.setText("0 Regular Tickets");
+
+        refreshButton.setText("Refresh");
+
+        titlePARK1.setBackground(new java.awt.Color(255, 153, 51));
+        titlePARK1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        titlePARK1.setText("0 Child Tickets");
+
+        titlePARK2.setBackground(new java.awt.Color(255, 153, 51));
+        titlePARK2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        titlePARK2.setText("0 Senior Tickets");
+
+        titlePARK3.setBackground(new java.awt.Color(255, 153, 51));
+        titlePARK3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        titlePARK3.setText("0 Regular Tickets");
+
+        titleTLA5.setBackground(new java.awt.Color(51, 255, 255));
+        titleTLA5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        titleTLA5.setText("0 Senior Tickets");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
-                .addComponent(textReservationsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titleTLA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titleTLA5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titleTLA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(290, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(titlePARK1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titlePARK3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titlePARK2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(titleTLA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(titleTLA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleTLA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleTLA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap()
+                        .addComponent(titleTLA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(textReservationsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(97, 97, 97))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(refreshButton)
+                        .addGap(190, 190, 190))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(textReservationsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(refreshButton)
+                .addGap(22, 22, 22)
                 .addComponent(titleTLA2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(titleTLA3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(titleTLA4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleTLA1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addComponent(titleTLA5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(titlePARK1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(titlePARK3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(titlePARK2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
 
         setBounds(725, 50, 491, 490);
@@ -142,11 +182,15 @@ public class reservations extends javax.swing.JFrame {
     public String ticketsForTLAChild;
     public String ticketsForATEAM;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton refreshButton;
     private java.awt.Label textReservationsTitle;
     private java.awt.Label titlePARK;
-    private java.awt.Label titleTLA1;
+    private java.awt.Label titlePARK1;
+    private java.awt.Label titlePARK2;
+    private java.awt.Label titlePARK3;
     private java.awt.Label titleTLA2;
     private java.awt.Label titleTLA3;
     private java.awt.Label titleTLA4;
+    private java.awt.Label titleTLA5;
     // End of variables declaration//GEN-END:variables
 }
