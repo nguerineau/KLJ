@@ -125,7 +125,7 @@ public class mainwindow extends javax.swing.JFrame {
     private void guestButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guestButtonMouseClicked
         // TODO add your handling code here:.
         dispose();
-        ticketsReservation.main(new String[0]);
+        accessRide.main(new String[0]);
     }//GEN-LAST:event_guestButtonMouseClicked
 
     /**
