@@ -9,7 +9,16 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author nicolasguerineau
+ * @author nicolasguerineau and Antoine Meunier
+ * 
+ * Quick Explanation of the main window:
+ * 
+ * This is the Main Window we have 3 option :
+ * 
+ * 1' log in : user is redirected to the frame loginForm
+ * 2' Register : user can register a new account
+ * 3' Guest : user can book for the park as a Guest and acces to accessRide frame
+ * 
  */
 public class mainwindow extends javax.swing.JFrame {
 
