@@ -65,6 +65,11 @@ public class reservations extends javax.swing.JFrame {
         seniorTicketsTLA.setText("0 Senior Tickets");
 
         refreshButton.setText("Refresh");
+        refreshButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshButtonActionPerformed(evt);
+            }
+        });
 
         childTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
         childTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -144,6 +149,10 @@ public class reservations extends javax.swing.JFrame {
 
         setBounds(725, 50, 491, 490);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_refreshButtonActionPerformed
 
     /**
      * @param args the command line arguments
