@@ -65,6 +65,11 @@ public class parkATRisk extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/A-Team.png"))); // NOI18N
         jLabel2.setText("jLabel2");
 
+        seniorTicketsNumber.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                seniorTicketsNumberFocusLost(evt);
+            }
+        });
         seniorTicketsNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seniorTicketsNumberActionPerformed(evt);
@@ -75,6 +80,11 @@ public class parkATRisk extends javax.swing.JFrame {
         ticketsBookATeam.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ticketsBookATeam.setForeground(new java.awt.Color(255, 255, 0));
         ticketsBookATeam.setText("Book");
+        ticketsBookATeam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ticketsBookATeamActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,6 +162,15 @@ public class parkATRisk extends javax.swing.JFrame {
     private void seniorTicketsNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seniorTicketsNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_seniorTicketsNumberActionPerformed
+
+    private void seniorTicketsNumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_seniorTicketsNumberFocusLost
+        // TODO add your handling code here
+        
+    }//GEN-LAST:event_seniorTicketsNumberFocusLost
+
+    private void ticketsBookATeamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ticketsBookATeamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ticketsBookATeamActionPerformed
 
     /**
      * @param args the command line arguments
