@@ -30,6 +30,7 @@ public class tLaTPula extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
+        ticketsBookSpace = new javax.swing.JButton();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
@@ -70,6 +71,13 @@ public class tLaTPula extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField3);
         jTextField3.setBounds(390, 60, 50, 30);
+
+        ticketsBookSpace.setBackground(new java.awt.Color(0, 255, 204));
+        ticketsBookSpace.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ticketsBookSpace.setForeground(new java.awt.Color(255, 255, 0));
+        ticketsBookSpace.setText("Book");
+        getContentPane().add(ticketsBookSpace);
+        ticketsBookSpace.setBounds(460, 310, 72, 27);
 
         label1.setBackground(new java.awt.Color(255, 102, 51));
         label1.setText("Child Tickets");
@@ -150,5 +158,6 @@ public class tLaTPula extends javax.swing.JFrame {
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;
+    private javax.swing.JButton ticketsBookSpace;
     // End of variables declaration//GEN-END:variables
 }
