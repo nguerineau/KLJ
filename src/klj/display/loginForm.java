@@ -221,9 +221,13 @@ public class loginForm extends javax.swing.JFrame {
         
         Connection con;
         try {
+            //connection
             con = DriverManager.getConnection(url,"root","root");
+            
+            // create statement
             Statement stmt = con.createStatement();
 
+            //accesing password from db
             String prepareStatement="SELECT password FROM account WHERE username = '"+username+"'";
             
 
@@ -277,6 +281,8 @@ public class loginForm extends javax.swing.JFrame {
         });
         
     }
+    
+    // variable
    String username;
    String password;
    String dbUsernameAns;
