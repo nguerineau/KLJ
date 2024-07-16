@@ -3,6 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package klj.display;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -54,15 +61,15 @@ public class reservations extends javax.swing.JFrame {
 
         childTicketsTLA.setBackground(new java.awt.Color(51, 255, 255));
         childTicketsTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        childTicketsTLA.setText("0 Child Tickets");
+        childTicketsTLA.setText(childticketTLATPU + " Child Tickets");
 
         regularTicketsTLA.setBackground(new java.awt.Color(51, 255, 255));
         regularTicketsTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        regularTicketsTLA.setText("0 Regular Tickets");
+        regularTicketsTLA.setText(regularticketTLATPU+" Regular Tickets");
 
         seniorTicketsTLA.setBackground(new java.awt.Color(51, 255, 255));
         seniorTicketsTLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        seniorTicketsTLA.setText("0 Senior Tickets");
+        seniorTicketsTLA.setText(seniorticketTLATPU +" Senior Tickets");
 
         refreshButton.setText("Refresh");
         refreshButton.addActionListener(new java.awt.event.ActionListener() {
@@ -73,15 +80,15 @@ public class reservations extends javax.swing.JFrame {
 
         childTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
         childTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        childTicketsAT.setText("0 Child Tickets");
+        childTicketsAT.setText(childticketAteam+" Child Tickets");
 
         seniorTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
         seniorTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        seniorTicketsAT.setText("0 Senior Tickets");
+        seniorTicketsAT.setText(seniorticketAteam+" Senior Tickets");
 
         regularTicketsAT.setBackground(new java.awt.Color(255, 153, 51));
         regularTicketsAT.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        regularTicketsAT.setText("0 Regular Tickets");
+        regularTicketsAT.setText(regularticketAteam+" Regular Tickets");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,7 +102,7 @@ public class reservations extends javax.swing.JFrame {
                             .addComponent(regularTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(seniorTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(childTicketsTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(290, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(childTicketsAT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -107,7 +114,7 @@ public class reservations extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,18 +156,62 @@ public class reservations extends javax.swing.JFrame {
 
     private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
         
+        String url = "jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        // Database credentials
         
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            // Establishing a connection
+            connection = DriverManager.getConnection(url, "root", "root");
+
+            // SQL query with placeholders
+            String sql = "SELECT id, name, age FROM Users WHERE age > ? AND name LIKE ?";
+            
+            // Create a PreparedStatement
+            preparedStatement = connection.prepareStatement(sql);
+            
+            // Set parameters dynamically
+            preparedStatement.setInt(1, 25); // Set age > 25
+            preparedStatement.setString(2, "J%"); // Set name to start with 'J'
+
+            // Execute the query
+            resultSet = preparedStatement.executeQuery();
+
+            // Process the result set
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int age = resultSet.getInt("age");
+
+                System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close the resources
+            try {
+                if (resultSet != null) resultSet.close();
+                if (preparedStatement != null) preparedStatement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
         
         
         
         childTicketsTLA.setText(childticketTLATPU+" Child Tickets");
-        regularTicketsTLA.setText(regularticketTLATPU+" Child Tickets");
-        seniorTicketsTLA.setText(seniorticketTLATPU+" Child Tickets");
+        regularTicketsTLA.setText(regularticketTLATPU+" Regular Tickets");
+        seniorTicketsTLA.setText(seniorticketTLATPU+" Senior Tickets");
         
         
         childTicketsAT.setText(childticketAteam +" Child Tickets");
-        regularTicketsAT.setText(regularticketAteam +" Child Tickets");
-        seniorTicketsAT.setText(seniorticketAteam +" Child Tickets");
+        regularTicketsAT.setText(regularticketAteam +" Regular Tickets");
+        seniorTicketsAT.setText(seniorticketAteam +" Senior Tickets");
         
         
     }//GEN-LAST:event_refreshButtonActionPerformed
