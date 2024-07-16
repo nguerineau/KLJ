@@ -4,6 +4,14 @@
  */
 package klj.ride;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import klj.display.register;
+
 /**
  *
  * @author meuni
@@ -91,6 +99,11 @@ public class tLaTPula extends javax.swing.JFrame {
         ticketsBookSpace.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ticketsBookSpace.setForeground(new java.awt.Color(255, 255, 0));
         ticketsBookSpace.setText("Book");
+        ticketsBookSpace.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ticketsBookSpaceMouseClicked(evt);
+            }
+        });
         getContentPane().add(ticketsBookSpace);
         ticketsBookSpace.setBounds(460, 310, 72, 23);
 
@@ -130,8 +143,8 @@ public class tLaTPula extends javax.swing.JFrame {
     }//GEN-LAST:event_seniorticketfieldActionPerformed
 
     private void childticketfieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_childticketfieldFocusLost
-        childTicketString = childticketfield.getText();
-        childTicket = Integer.parseInt(childTicketString);
+        childticketString = childticketfield.getText();
+        childticket = Integer.parseInt(childticketString);
     }//GEN-LAST:event_childticketfieldFocusLost
 
     private void regularticketfieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regularticketfieldFocusLost
@@ -143,6 +156,26 @@ public class tLaTPula extends javax.swing.JFrame {
         seniorticketString = seniorticketfield.getText();
         seniorticket = Integer.parseInt(seniorticketString);
     }//GEN-LAST:event_seniorticketfieldFocusLost
+
+    private void ticketsBookSpaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ticketsBookSpaceMouseClicked
+        String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        
+        Connection con;
+        try {
+            con = DriverManager.getConnection(url,"root","root");
+            PreparedStatement stmt2 = con.prepareStatement("INSERT INTO klj.ticket (ticket_regular, tiket_child, ticket_senior, ride)  VALUES (?, ?, ?, ?)");
+
+        stmt2.setInt(1,regularticket);
+        stmt2.setInt(2,childticket);
+        stmt2.setInt(3,seniorticket);
+        stmt2.setInt(4,ride);
+        
+        stmt2.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        dispose();
+    }//GEN-LAST:event_ticketsBookSpaceMouseClicked
 
     /**
      * @param args the command line arguments
@@ -178,12 +211,13 @@ public class tLaTPula extends javax.swing.JFrame {
             }
         });
     }
+    int ride = 1;
     String regularticketString ;
     int regularticket;
     String seniorticketString ;
     int seniorticket;
-    String childTicketString ;
-    int childTicket;
+    String childticketString ;
+    int childticket;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField childticketfield;
     private javax.swing.JLabel jLabel1;
