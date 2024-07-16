@@ -120,19 +120,22 @@ public class mainwindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        // TODO add your handling code here:
+        
+        // When register button clicked open the frame register
         register.main(new String[0]);
         
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
-        // TODO add your handling code here:
+        
+        //When log In button cliked open the frame loginForm
         loginForm.main(new String[0]);
         
     }//GEN-LAST:event_logInButtonActionPerformed
 
     private void guestButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guestButtonMouseClicked
-        // TODO add your handling code here:.
+        
+        //close the mainWindow and open the accesRide frame
         dispose();
         accessRide.main(new String[0]);
     }//GEN-LAST:event_guestButtonMouseClicked
