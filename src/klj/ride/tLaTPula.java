@@ -27,9 +27,9 @@ public class tLaTPula extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        seniorticketfield = new javax.swing.JTextField();
+        regularticketfield = new javax.swing.JTextField();
+        childticketfield = new javax.swing.JTextField();
         ticketsBookSpace = new javax.swing.JButton();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
@@ -48,36 +48,51 @@ public class tLaTPula extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(80, 40, 200, 200);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        seniorticketfield.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                seniorticketfieldFocusLost(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(390, 160, 50, 30);
+        seniorticketfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seniorticketfieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(seniorticketfield);
+        seniorticketfield.setBounds(390, 160, 50, 30);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+        regularticketfield.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                regularticketfieldFocusLost(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(390, 110, 50, 30);
+        regularticketfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regularticketfieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(regularticketfield);
+        regularticketfield.setBounds(390, 110, 50, 30);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+        childticketfield.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                childticketfieldFocusLost(evt);
             }
         });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(390, 60, 50, 30);
+        childticketfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                childticketfieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(childticketfield);
+        childticketfield.setBounds(390, 60, 50, 30);
 
         ticketsBookSpace.setBackground(new java.awt.Color(0, 255, 204));
         ticketsBookSpace.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ticketsBookSpace.setForeground(new java.awt.Color(255, 255, 0));
         ticketsBookSpace.setText("Book");
         getContentPane().add(ticketsBookSpace);
-        ticketsBookSpace.setBounds(460, 310, 72, 27);
+        ticketsBookSpace.setBounds(460, 310, 72, 23);
 
         label1.setBackground(new java.awt.Color(255, 102, 51));
         label1.setText("Child Tickets");
@@ -102,17 +117,32 @@ public class tLaTPula extends javax.swing.JFrame {
         setBounds(725, 150, 582, 369);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void childticketfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_childticketfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_childticketfieldActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void regularticketfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regularticketfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_regularticketfieldActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void seniorticketfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seniorticketfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_seniorticketfieldActionPerformed
+
+    private void childticketfieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_childticketfieldFocusLost
+        childTicketString = childticketfield.getText();
+        childTicket = Integer.parseInt(childTicketString);
+    }//GEN-LAST:event_childticketfieldFocusLost
+
+    private void regularticketfieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regularticketfieldFocusLost
+        regularticketString = regularticketfield.getText();
+        regularticket = Integer.parseInt(regularticketString);
+    }//GEN-LAST:event_regularticketfieldFocusLost
+
+    private void seniorticketfieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_seniorticketfieldFocusLost
+        seniorticketString = seniorticketfield.getText();
+        seniorticket = Integer.parseInt(seniorticketString);
+    }//GEN-LAST:event_seniorticketfieldFocusLost
 
     /**
      * @param args the command line arguments
@@ -148,16 +178,21 @@ public class tLaTPula extends javax.swing.JFrame {
             }
         });
     }
-
+    String regularticketString ;
+    int regularticket;
+    String seniorticketString ;
+    int seniorticket;
+    String childTicketString ;
+    int childTicket;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField childticketfield;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;
+    private javax.swing.JTextField regularticketfield;
+    private javax.swing.JTextField seniorticketfield;
     private javax.swing.JButton ticketsBookSpace;
     // End of variables declaration//GEN-END:variables
 }
