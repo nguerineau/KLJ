@@ -105,11 +105,13 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="regularTicketsNumber">
       <Events>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="regularTicketsNumberFocusLost"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regularTicketsNumberActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="childTicketsNumber">
       <Events>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="childTicketsNumberFocusLost"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="childTicketsNumberActionPerformed"/>
       </Events>
     </Component>
