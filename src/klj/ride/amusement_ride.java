@@ -23,6 +23,7 @@ public class amusement_ride {
     
     public amusement_ride(String ride_name){
         int places=50;
+        int disablePlaces=5;
         String url="jdbc:mysql://localhost:8889/KLJ?zeroDateTimeBehavior=CONVERT_TO_NULL";
         
         Connection con;
