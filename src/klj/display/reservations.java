@@ -103,13 +103,10 @@ public class reservations extends javax.swing.JFrame {
                             .addComponent(seniorTicketsAT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(textTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(titlePARK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textTLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -151,7 +148,21 @@ public class reservations extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
-        // TODO add your handling code here:
+        
+        
+        
+        
+        
+        childTicketsTLA.setText(childticketTLATPU+" Child Tickets");
+        regularTicketsTLA.setText(regularticketTLATPU+" Child Tickets");
+        seniorTicketsTLA.setText(seniorticketTLATPU+" Child Tickets");
+        
+        
+        childTicketsAT.setText(childticketAteam +" Child Tickets");
+        regularTicketsAT.setText(regularticketAteam +" Child Tickets");
+        seniorTicketsAT.setText(seniorticketAteam +" Child Tickets");
+        
+        
     }//GEN-LAST:event_refreshButtonActionPerformed
 
     /**
@@ -188,6 +199,13 @@ public class reservations extends javax.swing.JFrame {
             }
         });
     }
+    
+    int regularticketAteam ;
+    int regularticketTLATPU;
+    int seniorticketAteam ;
+    int seniorticketTLATPU;
+    int childticketAteam ;
+    int childticketTLATPU;
     public String ticketsForTLAChild;
     public String ticketsForATEAM;
     // Variables declaration - do not modify//GEN-BEGIN:variables
